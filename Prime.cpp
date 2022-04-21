@@ -60,7 +60,7 @@ Explanation 2:
  4 is not a prime number as it is divisible by 2.
 */
 
- #include<iostream>
+#include<iostream>
 
 using namespace std;
 
