@@ -31,4 +31,27 @@ Input 2:
 Output 2:
     [10, 50, 5, 50]
 */
-
+#include<iostream>
+#include<vector>
+using namespace std;
+vector<int> solve(vector<int> &A) {
+    int n=A.size();
+    vector<int>ans(n,0);
+    int p=1;
+    for(int i=0;i<n;i++){
+        p*=A[i];
+    }
+    for(int i=0;i<n;i++){
+        ans[i]=p/A[i];
+    }
+    return ans;
+}
+int main(){
+    vector<int>nums{1,2,3,4,5};
+    vector<int>res;
+    res=solve(nums);
+    for(int i=0;i<res.size();i++){
+        cout<<res[i]<<" ";
+    }
+    return 0;
+}
